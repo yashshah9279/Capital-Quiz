@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
+import {} from "dotenv/config";
 
 const app = express();
 const port = 3000;
@@ -9,7 +10,7 @@ const db = new pg.Client({
   user: "postgres",
   host: "localhost",
   database: "world",
-  password: "Yashh$hah27.",
+  password: process.env.PASSWORD,
   port: 5432,
 });
 
